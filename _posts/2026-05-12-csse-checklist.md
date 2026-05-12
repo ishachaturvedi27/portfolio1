@@ -87,7 +87,7 @@ table.style.overflow = "hidden";
 // HEADER
 const headerRow = document.createElement("tr");
 
-["Concept", "Project Evidence Required", "Assessment Method"].forEach((text, index) => {
+["Concept", "Implementation", "Explanation"].forEach((text, index) => {
   const th = document.createElement("th");
   th.textContent = text;
   th.style.padding = "14px";
