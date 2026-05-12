@@ -2,7 +2,7 @@
 layout: post
 codemirror: true
 title: CSSE Checklist
-description: Hi
+description: This checklist shows my progress over mltiple important key concepts of CSSE through multiple examples of various projects as each seciton highlights the topics we implemented and used. 
 permalink: /csse-checklist
 ---
 
