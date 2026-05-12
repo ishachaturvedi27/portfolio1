@@ -2,7 +2,7 @@
 layout: post
 codemirror: true
 title: CSSE Checklist
-description: This checklist shows my progress over mltiple important key concepts of CSSE through multiple examples of various projects as each seciton highlights the topics we implemented and used. 
+description: This checklist shows my progress over multiple important key concepts of CSSE through multiple examples of various projects as each section highlights the topics we implemented and used.
 permalink: /csse-checklist
 ---
 
@@ -50,7 +50,11 @@ const data = [
 
   ["🐞 Debugging", "", ""],
   ["Console Debugging", "", ""],
-  ["Hit Box Visualization", "", ""],
+
+  ["Hit Box Visualization",
+   "Ocean Adventure Hitbox Demo",
+   "https://pages.opencodingsociety.com/ocean-adventure"],
+
   ["Source-Level Debugging", "", ""],
   ["Network Debugging", "", ""],
   ["Application Debugging", "", ""],
@@ -87,12 +91,13 @@ table.style.overflow = "hidden";
 // HEADER
 const headerRow = document.createElement("tr");
 
-["Concept", "Implementation", "Explanation"].forEach((text, index) => {
+["Concept", "Explanation", "Implementation"].forEach((text, index) => {
   const th = document.createElement("th");
   th.textContent = text;
   th.style.padding = "14px";
   th.style.border = `2px solid ${rainbowColors[index + 1]}`;
-  th.style.background = "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
+  th.style.background =
+    "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
   th.style.color = "white";
   th.style.fontWeight = "bold";
   th.style.fontSize = "16px";
@@ -107,7 +112,7 @@ data.forEach((rowData, rowIndex) => {
 
   const borderColor = rainbowColors[rowIndex % rainbowColors.length];
 
-  rowData.forEach((cellData) => {
+  rowData.forEach((cellData, index) => {
     const cell = document.createElement("td");
 
     cell.style.border = `1px solid ${borderColor}`;
@@ -115,17 +120,56 @@ data.forEach((rowData, rowIndex) => {
     cell.style.transition = "0.3s ease";
     cell.style.backgroundColor = "#161b22";
 
-    cell.textContent = cellData;
+    // LINK BUTTON
+    if (index === 2 && cellData && cellData.startsWith("http")) {
+      const link = document.createElement("a");
+      link.href = cellData;
+      link.target = "_blank";
+      link.style.textDecoration = "none";
+
+      const button = document.createElement("div");
+      button.textContent = "Open Demo";
+      button.style.background =
+        "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
+      button.style.color = "white";
+      button.style.padding = "10px 16px";
+      button.style.borderRadius = "8px";
+      button.style.fontWeight = "bold";
+      button.style.textAlign = "center";
+      button.style.transition = "0.3s ease";
+      button.style.boxShadow = "0 0 10px rgba(255,255,255,0.2)";
+      button.style.cursor = "pointer";
+
+      button.addEventListener("mouseover", () => {
+        button.style.transform = "scale(1.05)";
+        button.style.boxShadow = "0 0 15px rgba(255,255,255,0.5)";
+      });
+
+      button.addEventListener("mouseout", () => {
+        button.style.transform = "scale(1)";
+        button.style.boxShadow = "0 0 10px rgba(255,255,255,0.2)";
+      });
+
+      link.appendChild(button);
+      cell.appendChild(link);
+
+    } else {
+      cell.textContent = cellData;
+    }
 
     // rainbow hover effect
     cell.addEventListener("mouseover", () => {
-      cell.style.backgroundColor = borderColor;
-      cell.style.color = "#000";
+      if (!cell.querySelector("a")) {
+        cell.style.backgroundColor = borderColor;
+        cell.style.color = "#000";
+      }
     });
 
     cell.addEventListener("mouseout", () => {
-      cell.style.backgroundColor = "#161b22";
-      cell.style.color = "#fff";
+      if (!cell.querySelector("a")) {
+        cell.style.backgroundColor = "#161b22";
+        cell.style.color = "#fff";
+      }
     });
 
     row.appendChild(cell);
@@ -135,6 +179,7 @@ data.forEach((rowData, rowIndex) => {
   if (rowData[1] === "" && rowData[2] === "" && rowData[0].includes(" ")) {
     row.style.fontWeight = "bold";
     row.style.fontSize = "17px";
+    row.style.backgroundColor = "#111827";
   }
 
   table.appendChild(row);
