@@ -61,7 +61,11 @@ const data = [
   ["Element Inspection", "", ""],
 
   ["✅ Testing & Verification", "", ""],
-  ["Gameplay Testing", "", ""],
+
+  ["Gameplay Testing",
+   "Ocean Adventure Gameplay Test",
+   "https://pages.opencodingsociety.com/ocean-adventure"],
+
   ["Integration Testing", "", ""],
   ["API Error Handling", "", ""]
 ];
@@ -91,7 +95,7 @@ table.style.overflow = "hidden";
 // HEADER
 const headerRow = document.createElement("tr");
 
-["Concept", "Explanation", "Implementation"].forEach((text, index) => {
+["Concept", "Implementation", "Explanation"].forEach((text, index) => {
   const th = document.createElement("th");
   th.textContent = text;
   th.style.padding = "14px";
@@ -120,7 +124,7 @@ data.forEach((rowData, rowIndex) => {
     cell.style.transition = "0.3s ease";
     cell.style.backgroundColor = "#161b22";
 
-    // LINK BUTTON
+    // BUTTON LINKS
     if (index === 2 && cellData && cellData.startsWith("http")) {
       const link = document.createElement("a");
       link.href = cellData;
@@ -128,26 +132,32 @@ data.forEach((rowData, rowIndex) => {
       link.style.textDecoration = "none";
 
       const button = document.createElement("div");
-      button.textContent = "Open Demo";
-      button.style.background =
-        "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
+
+      // Different button names for rows
+      if (rowData[0] === "Gameplay Testing") {
+        button.textContent = "Gameplay Test";
+        button.style.backgroundColor = "var(--green)";
+      } else {
+        button.textContent = "Hitbox Demo";
+        button.style.backgroundColor = "var(--teal)";
+      }
+
+      // SAME STYLE AS INDEX BUTTONS
       button.style.color = "white";
-      button.style.padding = "10px 16px";
-      button.style.borderRadius = "8px";
+      button.style.padding = "10px 20px";
+      button.style.borderRadius = "5px";
       button.style.fontWeight = "bold";
-      button.style.textAlign = "center";
-      button.style.transition = "0.3s ease";
-      button.style.boxShadow = "0 0 10px rgba(255,255,255,0.2)";
-      button.style.cursor = "pointer";
+      button.style.transition = "transform 0.2s, box-shadow 0.2s";
+      button.style.display = "inline-block";
 
       button.addEventListener("mouseover", () => {
         button.style.transform = "scale(1.05)";
-        button.style.boxShadow = "0 0 15px rgba(255,255,255,0.5)";
+        button.style.boxShadow = "0 0 12px rgba(255,255,255,0.4)";
       });
 
       button.addEventListener("mouseout", () => {
         button.style.transform = "scale(1)";
-        button.style.boxShadow = "0 0 10px rgba(255,255,255,0.2)";
+        button.style.boxShadow = "none";
       });
 
       link.appendChild(button);
