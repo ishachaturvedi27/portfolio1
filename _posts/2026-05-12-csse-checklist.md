@@ -11,8 +11,15 @@ permalink: /csse-checklist
 <script>
 const data = [
   ["🎮 Object-Oriented Programming", "", ""],
-  ["Writing Classes", "", ""],
-  ["Methods & Parameters", "", ""],
+
+  ["Writing Classes",
+   "We used classes to structure game objects like players and enemies.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
+
+  ["Methods & Parameters",
+   "We used methods and parameters to control actions like movement and collisions.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
+
   ["Instantiation & Objects", "", ""],
   ["Inheritance (Basic)", "", ""],
   ["Method Overriding", "", ""],
@@ -49,6 +56,7 @@ const data = [
   ["Code Highlights", "", ""],
 
   ["🐞 Debugging", "", ""],
+
   ["Console Debugging", "", ""],
 
   ["Hit Box Visualization",
@@ -132,17 +140,9 @@ data.forEach((rowData, rowIndex) => {
       link.style.textDecoration = "none";
 
       const button = document.createElement("div");
+      button.textContent = "Open!";
 
-      // Different button names for rows
-      if (rowData[0] === "Gameplay Testing") {
-        button.textContent = "Gameplay Test";
-        button.style.backgroundColor = "var(--green)";
-      } else {
-        button.textContent = "Hitbox Demo";
-        button.style.backgroundColor = "var(--teal)";
-      }
-
-      // SAME STYLE AS INDEX BUTTONS
+      button.style.backgroundColor = "var(--teal)";
       button.style.color = "white";
       button.style.padding = "10px 20px";
       button.style.borderRadius = "5px";
