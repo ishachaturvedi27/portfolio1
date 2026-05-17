@@ -24,9 +24,17 @@ const data = [
    "We used instantiation and objects to create reusable game elements that controlled movement, collisions, and player interactions throughout the game.",
    "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
 
-  ["Inheritance (Basic)", "", ""],
-  ["Method Overriding", "", ""],
-  ["Constructor Chaining", "", ""],
+  ["Inheritance (Basic)",
+   "We used inheritance to allow game objects to share common properties like movement, position, and collision behavior.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
+
+  ["Method Overriding",
+   "We used method overriding to customize behaviors like movement, attacks, and collision responses for different game objects.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
+
+  ["Constructor Chaining",
+   "We used constructor chaining to efficiently initialize shared properties across parent and child game classes.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
 
   ["⚙️ Control Structures", "", ""],
   ["Iteration", "", ""],
@@ -134,6 +142,7 @@ data.forEach((rowData, rowIndex) => {
     cell.style.padding = "12px";
     cell.style.transition = "0.3s ease";
     cell.style.backgroundColor = "#161b22";
+    cell.style.cursor = "pointer";
 
     // BUTTON LINKS
     if (index === 2 && cellData && cellData.startsWith("http")) {
@@ -189,7 +198,14 @@ data.forEach((rowData, rowIndex) => {
   });
 
   // section headers
-  if (rowData[1] === "" && rowData[2] === "" && rowData[0].includes(" ")) {
+  if (rowData[1] === "" && rowData[2] === "" && rowData[0].includes("🎮") ||
+      rowData[0].includes("⚙️") ||
+      rowData[0].includes("📦") ||
+      rowData[0].includes("➕") ||
+      rowData[0].includes("⌨️") ||
+      rowData[0].includes("📝") ||
+      rowData[0].includes("🐞") ||
+      rowData[0].includes("✅")) {
     row.style.fontWeight = "bold";
     row.style.fontSize = "17px";
     row.style.backgroundColor = "#111827";
