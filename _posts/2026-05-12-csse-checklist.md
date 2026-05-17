@@ -20,7 +20,10 @@ const data = [
    "We used methods and parameters to control actions like movement and collisions.",
    "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
 
-  ["Instantiation & Objects", "", ""],
+  ["Instantiation & Objects",
+   "We used instantiation and objects to create reusable game elements that controlled movement, collisions, and player interactions throughout the game.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
+
   ["Inheritance (Basic)", "", ""],
   ["Method Overriding", "", ""],
   ["Constructor Chaining", "", ""],
