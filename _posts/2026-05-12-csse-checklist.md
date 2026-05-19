@@ -115,21 +115,44 @@ const data = [
    "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
   ["📝 Documentation", "", ""],
-  ["Code Comments", "", ""],
-  ["Mini-Lesson Documentation", "", ""],
-  ["Code Highlights", "", ""],
+
+  ["Code Comments",
+   "We used comments in our code to explain logic and make it easier to understand.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
+
+  ["Mini-Lesson Documentation",
+   "We documented mini-lessons to explain coding concepts and game features.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
+
+  ["Code Highlights",
+   "We highlighted important parts of our code to show key gameplay logic.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["🐞 Debugging", "", ""],
-  ["Console Debugging", "", ""],
+
+  ["Console Debugging",
+   "We used the console to test values and fix errors in Ocean Adventure.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["Hit Box Visualization",
    "Ocean Adventure Hitbox Demo",
    "https://pages.opencodingsociety.com/ocean-adventure"],
 
-  ["Source-Level Debugging", "", ""],
-  ["Network Debugging", "", ""],
-  ["Application Debugging", "", ""],
-  ["Element Inspection", "", ""],
+  ["Source-Level Debugging",
+   "We debugged code directly in the source to fix gameplay issues.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
+
+  ["Network Debugging",
+   "We checked network requests to make sure game data loaded correctly.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
+
+  ["Application Debugging",
+   "We tested the full application to find and fix gameplay bugs.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
+
+  ["Element Inspection",
+   "We used inspect element tools to debug HTML and game UI issues.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["✅ Testing & Verification", "", ""],
 
@@ -204,7 +227,6 @@ data.forEach((rowData, rowIndex) => {
     cell.style.backgroundColor = "#161b22";
     cell.style.cursor = "pointer";
 
-    // BUTTON LINKS
     if (index === 2 && cellData && cellData.startsWith("http")) {
       const link = document.createElement("a");
       link.href = cellData;
@@ -240,7 +262,6 @@ data.forEach((rowData, rowIndex) => {
       cell.textContent = cellData;
     }
 
-    // hover effect
     cell.addEventListener("mouseover", () => {
       if (!cell.querySelector("a")) {
         cell.style.backgroundColor = borderColor;
@@ -258,7 +279,6 @@ data.forEach((rowData, rowIndex) => {
     row.appendChild(cell);
   });
 
-  // section headers
   if (
     rowData[1] === "" &&
     rowData[2] === "" &&
