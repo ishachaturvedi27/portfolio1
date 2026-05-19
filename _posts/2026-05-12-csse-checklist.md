@@ -36,17 +36,43 @@ const data = [
    "We used constructor chaining to efficiently initialize shared properties across parent and child game classes.",
    "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
 
-  ["⚙️ Control Structures", "", ""],
-  ["Iteration", "", ""],
-  ["Conditionals", "", ""],
-  ["Nested Conditions", "", ""],
+  ["⚙️ Control Structures",
+   "Ocean Adventure Control Structures",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Iteration",
+   "We used loops to repeatedly update enemies, coins, and game objects during gameplay.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Conditionals",
+   "We used conditionals to detect collisions, control scoring, and react to player actions.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Nested Conditions",
+   "We used nested conditions for cooldown systems, collision checks, and score protection.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
   ["📦 Data Types", "", ""],
-  ["Numbers", "", ""],
-  ["Strings", "", ""],
-  ["Booleans", "", ""],
-  ["Arrays", "", ""],
-  ["Objects (JSON)", "", ""],
+
+  ["Numbers",
+   "We used numbers for score values, player movement speed, positions, and enemy movement.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Strings",
+   "We used strings for NPC dialogue, object names, and score messages like +10 Points.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Booleans",
+   "We used booleans for collision states, cooldown systems, and game over checks.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Arrays",
+   "We used arrays to store enemies, coins, game objects, and level data.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
+
+  ["Objects (JSON)",
+   "We used objects to organize player data, enemy properties, and scoring systems.",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
   ["➕ Operators", "", ""],
   ["Mathematical", "", ""],
@@ -96,6 +122,15 @@ const rainbowColors = [
   "#66ff66",
   "#4dd2ff",
   "#6666ff",
+  "#cc66ff"
+];
+
+// alternating button colors
+const buttonColors = [
+  "#ff4da6",
+  "#4dd2ff",
+  "#66ff66",
+  "#ffd24d",
   "#cc66ff"
 ];
 
@@ -154,7 +189,10 @@ data.forEach((rowData, rowIndex) => {
       const button = document.createElement("div");
       button.textContent = "Open!";
 
-      button.style.backgroundColor = "var(--teal)";
+      // alternating button colors
+      button.style.backgroundColor =
+        buttonColors[rowIndex % buttonColors.length];
+
       button.style.color = "white";
       button.style.padding = "10px 20px";
       button.style.borderRadius = "5px";
@@ -198,14 +236,20 @@ data.forEach((rowData, rowIndex) => {
   });
 
   // section headers
-  if (rowData[1] === "" && rowData[2] === "" && rowData[0].includes("🎮") ||
-      rowData[0].includes("⚙️") ||
-      rowData[0].includes("📦") ||
-      rowData[0].includes("➕") ||
-      rowData[0].includes("⌨️") ||
-      rowData[0].includes("📝") ||
-      rowData[0].includes("🐞") ||
-      rowData[0].includes("✅")) {
+  if (
+      rowData[1] === "" &&
+      rowData[2] === "" &&
+      (
+        rowData[0].includes("🎮") ||
+        rowData[0].includes("⚙️") ||
+        rowData[0].includes("📦") ||
+        rowData[0].includes("➕") ||
+        rowData[0].includes("⌨️") ||
+        rowData[0].includes("📝") ||
+        rowData[0].includes("🐞") ||
+        rowData[0].includes("✅")
+      )
+    ) {
     row.style.fontWeight = "bold";
     row.style.fontSize = "17px";
     row.style.backgroundColor = "#111827";
