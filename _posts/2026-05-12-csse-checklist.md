@@ -75,17 +75,44 @@ const data = [
    "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
   ["➕ Operators", "", ""],
-  ["Mathematical", "", ""],
-  ["String Operations", "", ""],
-  ["Boolean Expressions", "", ""],
+
+  ["Mathematical Operators",
+   "We used math operators for movement speed, scoring, distance calculations, and enemy tracking.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["String Operations",
+   "We used string operations for score messages, NPC dialogue, and object names.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["Boolean Expressions",
+   "We used boolean expressions for collisions, cooldown systems, and game logic checks.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
   ["⌨️ Input/Output", "", ""],
-  ["Keyboard Input", "", ""],
-  ["Canvas Rendering", "", ""],
-  ["GameEnv Configuration", "", ""],
-  ["API Integration", "", ""],
-  ["Asynchronous I/O", "", ""],
-  ["JSON Parsing", "", ""],
+
+  ["Keyboard Input",
+   "We used keyboard input to move the octopus player with WASD controls in Ocean Adventure.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["Canvas Rendering",
+   "We used canvas rendering to draw Ocean Adventure sprites, backgrounds, and animations on screen.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["GameEnv Configuration",
+   "We used GameEnv configuration to set up levels, screen size, and game object behavior.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["API Integration",
+   "We used API integration to support loading external game data and features.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["Asynchronous I/O",
+   "We used asynchronous I/O so game assets load smoothly without freezing gameplay.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
+
+  ["JSON Parsing",
+   "We used JSON parsing to organize player stats, enemy data, and level configurations.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
   ["📝 Documentation", "", ""],
   ["Code Comments", "", ""],
@@ -93,7 +120,6 @@ const data = [
   ["Code Highlights", "", ""],
 
   ["🐞 Debugging", "", ""],
-
   ["Console Debugging", "", ""],
 
   ["Hit Box Visualization",
@@ -125,7 +151,6 @@ const rainbowColors = [
   "#cc66ff"
 ];
 
-// alternating button colors
 const buttonColors = [
   "#ff4da6",
   "#4dd2ff",
@@ -189,7 +214,6 @@ data.forEach((rowData, rowIndex) => {
       const button = document.createElement("div");
       button.textContent = "Open!";
 
-      // alternating button colors
       button.style.backgroundColor =
         buttonColors[rowIndex % buttonColors.length];
 
@@ -212,12 +236,11 @@ data.forEach((rowData, rowIndex) => {
 
       link.appendChild(button);
       cell.appendChild(link);
-
     } else {
       cell.textContent = cellData;
     }
 
-    // rainbow hover effect
+    // hover effect
     cell.addEventListener("mouseover", () => {
       if (!cell.querySelector("a")) {
         cell.style.backgroundColor = borderColor;
@@ -237,19 +260,19 @@ data.forEach((rowData, rowIndex) => {
 
   // section headers
   if (
-      rowData[1] === "" &&
-      rowData[2] === "" &&
-      (
-        rowData[0].includes("🎮") ||
-        rowData[0].includes("⚙️") ||
-        rowData[0].includes("📦") ||
-        rowData[0].includes("➕") ||
-        rowData[0].includes("⌨️") ||
-        rowData[0].includes("📝") ||
-        rowData[0].includes("🐞") ||
-        rowData[0].includes("✅")
-      )
-    ) {
+    rowData[1] === "" &&
+    rowData[2] === "" &&
+    (
+      rowData[0].includes("🎮") ||
+      rowData[0].includes("⚙️") ||
+      rowData[0].includes("📦") ||
+      rowData[0].includes("➕") ||
+      rowData[0].includes("⌨️") ||
+      rowData[0].includes("📝") ||
+      rowData[0].includes("🐞") ||
+      rowData[0].includes("✅")
+    )
+  ) {
     row.style.fontWeight = "bold";
     row.style.fontSize = "17px";
     row.style.backgroundColor = "#111827";
