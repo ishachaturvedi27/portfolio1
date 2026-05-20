@@ -10,7 +10,9 @@ permalink: /csse-checklist
 
 <script>
 const data = [
-  ["🎮 Object-Oriented Programming", "", ""],
+  ["🎮 Object-Oriented Programming",
+   "We used object oriented programming to organize our game into different classes like players, enemies, and coins so everything was easier to manage and reuse.",
+   "https://ishachaturvedi27.github.io/portfolio1/information-checklist"],
 
   ["Writing Classes",
    "We used classes to structure game objects like players and enemies.",
@@ -76,7 +78,9 @@ const data = [
    "We used objects to organize player data, enemy properties, and scoring systems.",
    "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
-  ["➕ Operators", "", ""],
+  ["➕ Operators",
+   "We used operators like +, -, *, /, and logical comparisons to control scoring, movement, and game logic in Ocean Adventure.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
   ["Mathematical Operators",
    "We used math operators for movement speed, scoring, distance calculations, and enemy tracking.",

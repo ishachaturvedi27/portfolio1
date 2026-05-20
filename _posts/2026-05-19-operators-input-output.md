@@ -285,6 +285,42 @@ if (alive && !hasPowerUp) {
 
 ---
 
+### Input / Output
+
+Input and output is basically how the game talks to the player and how the player controls the game. Input is what the player does, and output is what the game shows back.
+
+In Ocean Adventure, input and output were really important because they made the game interactive.
+
+We used input/output for:
+
+- keyboard controls (input from player)  
+- showing movement and animations on screen (output)  
+- displaying score updates and messages  
+- reacting to player actions in real time  
+
+<div class="code-runner">
+<pre><code class="language-javascript">
+// Input / Output example
+
+document.addEventListener("keydown", function(event) {
+
+    // INPUT (player presses a key)
+    if (event.key === "w") {
+        console.log("Player moves up");
+    }
+
+});
+
+// OUTPUT (game shows result)
+let score = 0;
+score += 10;
+
+console.log("Score is now " + score);
+</code></pre>
+</div>
+
+---
+
 ### Summary
 
 All of these advanced programming concepts helped make Ocean Adventure feel like a real game. Mathematical operators controlled movement and scoring, rendering displayed objects on the screen, APIs handled outside data, and JSON kept everything organized.
