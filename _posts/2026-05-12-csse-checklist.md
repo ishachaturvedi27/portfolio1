@@ -52,7 +52,9 @@ const data = [
    "We used nested conditions for cooldown systems, collision checks, and score protection.",
    "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
-  ["📦 Data Types", "", ""],
+  ["📦 Data Types",
+   "Ocean Adventure Data Types",
+   "https://ishachaturvedi27.github.io/portfolio1/control-structures"],
 
   ["Numbers",
    "We used numbers for score values, player movement speed, positions, and enemy movement.",
@@ -160,8 +162,13 @@ const data = [
    "Ocean Adventure Gameplay Test",
    "https://pages.opencodingsociety.com/ocean-adventure"],
 
-  ["Integration Testing", "", ""],
-  ["API Error Handling", "", ""]
+  ["Integration Testing",
+   "We tested different parts of the game together to make sure everything worked correctly.",
+   "https://ishachaturvedi27.github.io/portfolio1/testing-verification"],
+
+  ["API Error Handling",
+   "We used API error handling to prevent the game from crashing if data failed to load.",
+   "https://ishachaturvedi27.github.io/portfolio1/testing-verification"]
 ];
 
 const rainbowColors = [
