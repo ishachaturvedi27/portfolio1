@@ -8,7 +8,7 @@ permalink: /control-structures
 
 ### Control Structures
 
-Control structures helped our Ocean Adventure game decide what should happen while the game was running. Instead of everything happening at once, the game checks conditions and reacts to what the player does.
+Control structures helped our Ocean Adventure game decide what should happen while the game was running. Instead of everything happening at once, the game checks different conditions and reacts to what the player is doing. This made the game feel way more interactive and realistic while we were coding it.
 
 Here are some ways we used control structures in our game:
 
@@ -33,7 +33,7 @@ if (playerTouchesShark) {
 
 ### Iteration (Loops)
 
-Iteration means repeating actions over and over again. In Ocean Adventure, loops were important because the game is always updating things like movement, enemies, and coins.
+Iteration means repeating actions over and over again. In Ocean Adventure, loops were super important because the game constantly updates enemies, coins, movement, and animations while the player is playing. Without loops, we would have had to rewrite the same code again and again which would make the code messy and confusing.
 
 Here are some ways we used iteration:
 
@@ -58,7 +58,7 @@ for (let obj of gameObjects) {
 
 ### Conditionals
 
-Conditionals helped the game make decisions based on what was happening in the level. They made the game feel interactive instead of random.
+Conditionals helped the game make decisions depending on what was happening in the level. They allowed the game to react differently based on player actions which made gameplay feel more real and less random. We used conditionals a lot for collisions, scoring, and level events.
 
 We used conditionals for:
 
@@ -83,7 +83,7 @@ if (distance < 40) {
 
 ### Nested Conditions
 
-Nested conditions are when you put one condition inside another. We used this when the game needed to check multiple things before doing something.
+Nested conditions are when one condition is placed inside another condition. We used these in Ocean Adventure whenever the game needed to check multiple things before doing an action. This helped stop bugs and made sure certain actions only happened at the correct time.
 
 We used nested conditions for:
 
@@ -110,7 +110,7 @@ if (distance < 40) {
 
 ### Numbers
 
-Numbers were used everywhere in Ocean Adventure to control movement, scoring, and positions.
+Numbers were used everywhere in Ocean Adventure because games rely on coordinates, movement, timing, and scoring systems. We used numbers to control things like player speed, enemy movement, health, and score values. Without numbers, the game objects would not know where to move or how fast to move.
 
 We used numbers for:
 
@@ -134,7 +134,7 @@ let yPosition = 300;
 
 ### Strings
 
-Strings are just text. We used them to show messages and name objects in the game.
+Strings are basically text values in programming. We used strings throughout Ocean Adventure for dialogue, labels, and messages shown to the player during gameplay. Strings helped make the game feel more alive because players could actually see messages and names instead of just numbers.
 
 We used strings for:
 
@@ -155,7 +155,7 @@ console.log(message);
 
 ### Booleans
 
-Booleans are true or false values. We used them to control game states.
+Booleans are values that are either true or false. We used booleans a lot in Ocean Adventure to track game states and collisions. They helped the game know whether something was happening or not happening during gameplay.
 
 We used booleans for:
 
@@ -177,7 +177,7 @@ let isTouchingEnemy = true;
 
 ### Arrays
 
-Arrays helped us store multiple items like coins, enemies, and game objects.
+Arrays helped us store multiple items together in one place. In Ocean Adventure, arrays were really useful because there were many enemies, coins, and game objects that needed to be updated constantly. Arrays made the code way more organized and easier to loop through.
 
 We used arrays for:
 
@@ -201,7 +201,7 @@ for (let coin of coins) {
 
 ### Objects (JSON Style)
 
-Objects helped us organize game data in a clean way so everything wasn’t messy.
+Objects helped us organize information into groups instead of storing everything separately. We used objects for players, sharks, and collectibles because they could hold multiple properties in one place. This made the code cleaner and easier to understand while building the game.
 
 We used objects for:
 
@@ -225,10 +225,50 @@ console.log(shark.name);
 
 ---
 
+### Data Types
+
+Data types were really important in our Ocean Adventure game because they helped us store and organize different kinds of information while the game was running. We used data types for things like player movement, scores, enemy behavior, collisions, and interactions with NPCs. Different data types helped the game know what kind of information it was working with so everything functioned correctly.
+
+Here are some ways we used data types in Ocean Adventure:
+
+- numbers for player speed, score, and positions  
+- strings for dialogue, labels, and game messages  
+- booleans for checking collisions and game states  
+- arrays for storing enemies, coins, and obstacles  
+- objects for organizing player and shark information  
+
+<div class="code-runner">
+<pre><code class="language-javascript">
+// Data types used in Ocean Adventure
+
+// Number
+let playerSpeed = 7;
+let score = 50;
+
+// String
+let playerName = "Octo Explorer";
+
+// Boolean
+let gameOver = false;
+
+// Array
+let enemies = ["Shark", "Jellyfish", "Eel"];
+
+// Object
+let player = {
+    name: "Octo Explorer",
+    health: 100,
+    speed: 7
+};
+
+console.log(player.name);
+</code></pre>
+</div>
+
+---
+
 ### Summary
 
-All of these control structures and data types worked together to build Ocean Adventure. Loops kept the game running, conditionals made decisions, and data types stored everything like players, enemies, and scores.
-
-Without these, the game wouldn’t move, react, or feel like a real game at all.
+All of these control structures and data types worked together to build Ocean Adventure. Loops kept the game running, conditionals made decisions, and data types stored everything like players, enemies, and scores. Without these programming concepts, the game would not move, react, or feel like an actual playable game.
 
 
