@@ -2,7 +2,7 @@
 layout: post
 codemirror: true
 title: CSSE Checklist
-description: This checklist shows my progress over multiple important key concepts of CSSE through multiple examples of various projects as each section highlights the topics we implemented and used.
+description: This checklist shows my progress over multiple important key concepts of CSSE through multiple examples of various projects as each section highlights the topics we implemented and used. Each button will take you to more information about the topic on a seperate page!
 permalink: /csse-checklist
 ---
 
@@ -94,7 +94,9 @@ const data = [
    "We used boolean expressions for collisions, cooldown systems, and game logic checks.",
    "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
-  ["⌨️ Input/Output", "", ""],
+  ["⌨️ Input/Output",
+   "We used input and output in our game to take player controls (like keyboard input) and show results on the screen such as movement, scores, and game feedback.",
+   "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
   ["Keyboard Input",
    "We used keyboard input to move the octopus player with WASD controls in Ocean Adventure.",
