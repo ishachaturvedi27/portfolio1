@@ -248,6 +248,43 @@ console.log(parsedData.name);
 
 ---
 
+### Operators (General)
+
+Operators in general are symbols that help the computer do actions with values. In Ocean Adventure, we used different types of operators all the time to make the game actually work.
+
+We used operators for:
+
+- doing math like adding scores and moving objects  
+- comparing values like checking collisions or health  
+- combining conditions using AND / OR logic  
+- updating variables like speed and position  
+
+<div class="code-runner">
+<pre><code class="language-javascript">
+// General operators example
+
+let score = 10;
+
+// arithmetic operator
+score = score + 5;
+
+// comparison operator
+if (score >= 15) {
+    console.log("Level up!");
+}
+
+// logical operator
+let alive = true;
+let hasPowerUp = false;
+
+if (alive && !hasPowerUp) {
+    console.log("Normal state");
+}
+</code></pre>
+</div>
+
+---
+
 ### Summary
 
 All of these advanced programming concepts helped make Ocean Adventure feel like a real game. Mathematical operators controlled movement and scoring, rendering displayed objects on the screen, APIs handled outside data, and JSON kept everything organized.

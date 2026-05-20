@@ -116,7 +116,9 @@ const data = [
    "We used JSON parsing to organize player stats, enemy data, and level configurations.",
    "https://ishachaturvedi27.github.io/portfolio1/advanced-features"],
 
-  ["📝 Documentation", "", ""],
+  ["📝 Documentation",
+   "We used documentation to explain our code and make it easier to understand later.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["Code Comments",
    "We used comments in our code to explain logic and make it easier to understand.",
@@ -130,7 +132,9 @@ const data = [
    "We highlighted important parts of our code to show key gameplay logic.",
    "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
-  ["🐞 Debugging", "", ""],
+  ["🐞 Debugging",
+   "We used debugging tools to find and fix problems in Ocean Adventure.",
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["Console Debugging",
    "We used the console to test values and fix errors in Ocean Adventure.",
@@ -156,7 +160,9 @@ const data = [
    "We used inspect element tools to debug HTML and game UI issues.",
    "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
-  ["✅ Testing & Verification", "", ""],
+  ["✅ Testing & Verification",
+   "We tested and checked our game carefully to make sure everything worked as expected. This helped us find bugs early and improve gameplay before publishing.",
+   "https://ishachaturvedi27.github.io/portfolio1/testing-error-handling"],
 
   ["Gameplay Testing",
    "Ocean Adventure Gameplay Test",
