@@ -28,6 +28,26 @@ this.position.x += Math.cos(angle) * speed;
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_1 %}
+Code Comments
+{% endcapture %}
+
+{% capture code_cs111_demo_1 %}
+// Shark enemy follows the closest player
+
+const speed = 2.2;
+
+// Move shark toward player
+console.log("Shark speed:", speed);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-1"
+   language="javascript"
+   challenge=challenge_cs111_demo_1
+   code=code_cs111_demo_1
+%}
+
 ---
 
 ### Mini-Lesson Documentation
@@ -53,6 +73,27 @@ and the player so the shark can chase them.
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_2 %}
+Mini-Lesson Documentation
+{% endcapture %}
+
+{% capture code_cs111_demo_2 %}
+/*
+This update function runs every frame.
+It checks the distance between the shark
+and the player so the shark can chase them.
+*/
+
+console.log("Documentation example loaded");
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-2"
+   language="javascript"
+   challenge=challenge_cs111_demo_2
+   code=code_cs111_demo_2
+%}
+
 ---
 
 ### Code Highlights
@@ -76,6 +117,26 @@ if (dist < 40) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_3 %}
+Code Highlights
+{% endcapture %}
+
+{% capture code_cs111_demo_3 %}
+let dist = 25;
+
+// Important collision check
+if (dist < 40) {
+    console.log("Player hit!");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-3"
+   language="javascript"
+   challenge=challenge_cs111_demo_3
+   code=code_cs111_demo_3
+%}
+
 ---
 
 ### Console Debugging
@@ -98,6 +159,30 @@ console.log("Player X Position:", player.position.x);
 console.log("Current Score:", score);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_4 %}
+Console Debugging
+{% endcapture %}
+
+{% capture code_cs111_demo_4 %}
+let player = {
+    position: {
+        x: 120
+    }
+};
+
+let score = 50;
+
+console.log("Player X Position:", player.position.x);
+console.log("Current Score:", score);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-4"
+   language="javascript"
+   challenge=challenge_cs111_demo_4
+   code=code_cs111_demo_4
+%}
 
 ---
 
@@ -124,6 +209,26 @@ const hitbox = {
 console.log(hitbox);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_5 %}
+Hit Box Visualization
+{% endcapture %}
+
+{% capture code_cs111_demo_5 %}
+const hitbox = {
+    widthPercentage: 0.4,
+    heightPercentage: 0.4
+};
+
+console.log(hitbox);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-5"
+   language="javascript"
+   challenge=challenge_cs111_demo_5
+   code=code_cs111_demo_5
+%}
 
 ---
 
@@ -153,6 +258,28 @@ movePlayer();
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_6 %}
+Source-Level Debugging
+{% endcapture %}
+
+{% capture code_cs111_demo_6 %}
+function movePlayer() {
+
+    debugger;
+
+    console.log("Moving player...");
+}
+
+movePlayer();
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-6"
+   language="javascript"
+   challenge=challenge_cs111_demo_6
+   code=code_cs111_demo_6
+%}
+
 ---
 
 ### Network Debugging
@@ -177,6 +304,25 @@ fetch("https://example.com/leaderboard")
     });
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_7 %}
+Network Debugging
+{% endcapture %}
+
+{% capture code_cs111_demo_7 %}
+fetch("https://example.com/leaderboard")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-7"
+   language="javascript"
+   challenge=challenge_cs111_demo_7
+   code=code_cs111_demo_7
+%}
 
 ---
 
@@ -203,6 +349,27 @@ if (gameOver) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_8 %}
+Application Debugging
+{% endcapture %}
+
+{% capture code_cs111_demo_8 %}
+let gameOver = false;
+
+if (gameOver) {
+    console.log("Game has ended");
+} else {
+    console.log("Game still running");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-8"
+   language="javascript"
+   challenge=challenge_cs111_demo_8
+   code=code_cs111_demo_8
+%}
+
 ---
 
 ### Element Inspection
@@ -225,6 +392,23 @@ const scoreboard = document.getElementById("game-scoreboard");
 console.log(scoreboard);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_9 %}
+Element Inspection
+{% endcapture %}
+
+{% capture code_cs111_demo_9 %}
+const scoreboard = document.getElementById("game-scoreboard");
+
+console.log(scoreboard);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-9"
+   language="javascript"
+   challenge=challenge_cs111_demo_9
+   code=code_cs111_demo_9
+%}
 
 ---
 
