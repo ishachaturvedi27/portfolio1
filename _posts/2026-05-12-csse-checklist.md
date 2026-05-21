@@ -322,6 +322,32 @@ data.forEach((rowData, rowIndex) => {
 
 container.appendChild(table);
 </script>
+{% capture challenge_cs111_demo_1 %}
+Classes & Objects
+{% endcapture %}
+
+{% capture code_cs111_demo_1 %}
+class Player {
+  constructor(name) {
+    this.name = name;
+    this.hp = 100;
+  }
+
+  status() {
+    return `${this.name}: ${this.hp} hp`;
+  }
+}
+
+const p = new Player("Knight");
+console.log(p.status());
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-1"
+   language="javascript"
+   challenge=challenge_cs111_demo_1
+   code=code_cs111_demo_1
+%}
 
 ### What Are Some Problems We Ran Into?
 Throughout the whole trimester our group ( me and joshika ) have run into a lot of errors for various different reasons. For exmaple at first when we started working with the gameengine our game would not load on the screen, it took a lot of time and effort to debug. Here are some things we had issues with that we now know more about becuase of a hard experience with them.
