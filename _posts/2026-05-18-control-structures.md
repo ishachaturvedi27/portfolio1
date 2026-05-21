@@ -29,6 +29,25 @@ if (playerTouchesShark) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_1 %}
+Control Structures
+{% endcapture %}
+
+{% capture code_cs111_demo_1 %}
+let playerTouchesShark = true;
+
+if (playerTouchesShark) {
+    console.log("Player loses points!");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-1"
+   language="javascript"
+   challenge=challenge_cs111_demo_1
+   code=code_cs111_demo_1
+%}
+
 ---
 
 ### Iteration (Loops)
@@ -54,6 +73,25 @@ for (let obj of gameObjects) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_2 %}
+Iteration (Loops)
+{% endcapture %}
+
+{% capture code_cs111_demo_2 %}
+let gameObjects = ["shark", "coin", "octopus"];
+
+for (let obj of gameObjects) {
+    console.log("Updating: " + obj);
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-2"
+   language="javascript"
+   challenge=challenge_cs111_demo_2
+   code=code_cs111_demo_2
+%}
+
 ---
 
 ### Conditionals
@@ -78,6 +116,25 @@ if (distance < 40) {
 }
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_3 %}
+Conditionals
+{% endcapture %}
+
+{% capture code_cs111_demo_3 %}
+let distance = 30;
+
+if (distance < 40) {
+    console.log("Collision happened!");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-3"
+   language="javascript"
+   challenge=challenge_cs111_demo_3
+   code=code_cs111_demo_3
+%}
 
 ---
 
@@ -106,6 +163,28 @@ if (distance < 40) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_4 %}
+Nested Conditions
+{% endcapture %}
+
+{% capture code_cs111_demo_4 %}
+let distance = 30;
+let cooldownActive = false;
+
+if (distance < 40) {
+    if (!cooldownActive) {
+        console.log("Player takes damage!");
+    }
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-4"
+   language="javascript"
+   challenge=challenge_cs111_demo_4
+   code=code_cs111_demo_4
+%}
+
 ---
 
 ### Numbers
@@ -130,6 +209,27 @@ let yPosition = 300;
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_5 %}
+Numbers
+{% endcapture %}
+
+{% capture code_cs111_demo_5 %}
+let speed = 6;
+let score = 0;
+let xPosition = 120;
+let yPosition = 300;
+
+console.log(speed);
+console.log(score);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-5"
+   language="javascript"
+   challenge=challenge_cs111_demo_5
+   code=code_cs111_demo_5
+%}
+
 ---
 
 ### Strings
@@ -150,6 +250,22 @@ let message = "You collected a coin!";
 console.log(message);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_6 %}
+Strings
+{% endcapture %}
+
+{% capture code_cs111_demo_6 %}
+let message = "You collected a coin!";
+console.log(message);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-6"
+   language="javascript"
+   challenge=challenge_cs111_demo_6
+   code=code_cs111_demo_6
+%}
 
 ---
 
@@ -172,6 +288,25 @@ let gameOver = false;
 let isTouchingEnemy = true;
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_7 %}
+Booleans
+{% endcapture %}
+
+{% capture code_cs111_demo_7 %}
+let gameOver = false;
+let isTouchingEnemy = true;
+
+console.log(gameOver);
+console.log(isTouchingEnemy);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-7"
+   language="javascript"
+   challenge=challenge_cs111_demo_7
+   code=code_cs111_demo_7
+%}
 
 ---
 
@@ -196,6 +331,25 @@ for (let coin of coins) {
 }
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_8 %}
+Arrays
+{% endcapture %}
+
+{% capture code_cs111_demo_8 %}
+let coins = ["coin1", "coin2", "coin3"];
+
+for (let coin of coins) {
+    console.log("Checking " + coin);
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-8"
+   language="javascript"
+   challenge=challenge_cs111_demo_8
+   code=code_cs111_demo_8
+%}
 
 ---
 
@@ -222,6 +376,27 @@ let shark = {
 console.log(shark.name);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_9 %}
+Objects (JSON Style)
+{% endcapture %}
+
+{% capture code_cs111_demo_9 %}
+let shark = {
+    name: "Shark Enemy",
+    speed: 3,
+    damage: 10
+};
+
+console.log(shark.name);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-9"
+   language="javascript"
+   challenge=challenge_cs111_demo_9
+   code=code_cs111_demo_9
+%}
 
 ---
 
@@ -265,10 +440,44 @@ console.log(player.name);
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_10 %}
+Data Types
+{% endcapture %}
+
+{% capture code_cs111_demo_10 %}
+// Number
+let playerSpeed = 7;
+let score = 50;
+
+// String
+let playerName = "Octo Explorer";
+
+// Boolean
+let gameOver = false;
+
+// Array
+let enemies = ["Shark", "Jellyfish", "Eel"];
+
+// Object
+let player = {
+    name: "Octo Explorer",
+    health: 100,
+    speed: 7
+};
+
+console.log(player.name);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-10"
+   language="javascript"
+   challenge=challenge_cs111_demo_10
+   code=code_cs111_demo_10
+%}
+
 ---
 
 ### Summary
 
 All of these control structures and data types worked together to build Ocean Adventure. Loops kept the game running, conditionals made decisions, and data types stored everything like players, enemies, and scores. Without these programming concepts, the game would not move, react, or feel like an actual playable game.
-
 
