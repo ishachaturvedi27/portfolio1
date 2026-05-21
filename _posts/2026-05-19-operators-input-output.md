@@ -34,6 +34,30 @@ console.log(distance);
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_1 %}
+Mathematical Operators
+{% endcapture %}
+
+{% capture code_cs111_demo_1 %}
+let score = 0;
+
+score += 10;
+
+let dx = 50 - 20;
+let dy = 80 - 40;
+
+let distance = Math.sqrt(dx * dx + dy * dy);
+
+console.log(distance);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-1"
+   language="javascript"
+   challenge=challenge_cs111_demo_1
+   code=code_cs111_demo_1
+%}
+
 ---
 
 ### String Operations
@@ -57,6 +81,24 @@ let message = playerName + " collected a coin!";
 console.log(message);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_2 %}
+String Operations
+{% endcapture %}
+
+{% capture code_cs111_demo_2 %}
+let playerName = "Octopus";
+let message = playerName + " collected a coin!";
+
+console.log(message);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-2"
+   language="javascript"
+   challenge=challenge_cs111_demo_2
+   code=code_cs111_demo_2
+%}
 
 ---
 
@@ -83,6 +125,26 @@ if (touchingEnemy && !cooldownActive) {
 }
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_3 %}
+Boolean Expressions
+{% endcapture %}
+
+{% capture code_cs111_demo_3 %}
+let touchingEnemy = true;
+let cooldownActive = false;
+
+if (touchingEnemy && !cooldownActive) {
+    console.log("Player takes damage!");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-3"
+   language="javascript"
+   challenge=challenge_cs111_demo_3
+   code=code_cs111_demo_3
+%}
 
 ---
 
@@ -115,6 +177,31 @@ document.addEventListener("keydown", function(event) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_4 %}
+Keyboard Input
+{% endcapture %}
+
+{% capture code_cs111_demo_4 %}
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "w") {
+        console.log("Move Up");
+    }
+
+    if (event.key === "a") {
+        console.log("Move Left");
+    }
+
+});
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-4"
+   language="javascript"
+   challenge=challenge_cs111_demo_4
+   code=code_cs111_demo_4
+%}
+
 ---
 
 ### Canvas Rendering
@@ -139,6 +226,25 @@ ctx.fillStyle = "blue";
 ctx.fillRect(50, 50, 100, 100);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_5 %}
+Canvas Rendering
+{% endcapture %}
+
+{% capture code_cs111_demo_5 %}
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "blue";
+ctx.fillRect(50, 50, 100, 100);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-5"
+   language="javascript"
+   challenge=challenge_cs111_demo_5
+   code=code_cs111_demo_5
+%}
 
 ---
 
@@ -167,6 +273,27 @@ console.log(gameEnv.width);
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_6 %}
+GameEnv Configuration
+{% endcapture %}
+
+{% capture code_cs111_demo_6 %}
+const gameEnv = {
+    width: 800,
+    height: 600,
+    score: 0
+};
+
+console.log(gameEnv.width);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-6"
+   language="javascript"
+   challenge=challenge_cs111_demo_6
+   code=code_cs111_demo_6
+%}
+
 ---
 
 ### API Integration
@@ -191,6 +318,25 @@ fetch("https://example.com/leaderboard")
     });
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_7 %}
+API Integration
+{% endcapture %}
+
+{% capture code_cs111_demo_7 %}
+fetch("https://example.com/leaderboard")
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    });
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-7"
+   language="javascript"
+   challenge=challenge_cs111_demo_7
+   code=code_cs111_demo_7
+%}
 
 ---
 
@@ -221,6 +367,29 @@ loadLeaderboard();
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_8 %}
+Asynchronous I/O
+{% endcapture %}
+
+{% capture code_cs111_demo_8 %}
+async function loadLeaderboard() {
+
+    let response = await fetch("https://example.com/data");
+    let data = await response.json();
+
+    console.log(data);
+}
+
+loadLeaderboard();
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-8"
+   language="javascript"
+   challenge=challenge_cs111_demo_8
+   code=code_cs111_demo_8
+%}
+
 ---
 
 ### JSON Parsing
@@ -245,6 +414,25 @@ let parsedData = JSON.parse(sharkData);
 console.log(parsedData.name);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_9 %}
+JSON Parsing
+{% endcapture %}
+
+{% capture code_cs111_demo_9 %}
+let sharkData = '{"name":"Shark","damage":10}';
+
+let parsedData = JSON.parse(sharkData);
+
+console.log(parsedData.name);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-9"
+   language="javascript"
+   challenge=challenge_cs111_demo_9
+   code=code_cs111_demo_9
+%}
 
 ---
 
@@ -283,6 +471,37 @@ if (alive && !hasPowerUp) {
 </code></pre>
 </div>
 
+{% capture challenge_cs111_demo_10 %}
+Operators (General)
+{% endcapture %}
+
+{% capture code_cs111_demo_10 %}
+let score = 10;
+
+// arithmetic operator
+score = score + 5;
+
+// comparison operator
+if (score >= 15) {
+    console.log("Level up!");
+}
+
+// logical operator
+let alive = true;
+let hasPowerUp = false;
+
+if (alive && !hasPowerUp) {
+    console.log("Normal state");
+}
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-10"
+   language="javascript"
+   challenge=challenge_cs111_demo_10
+   code=code_cs111_demo_10
+%}
+
 ---
 
 ### Input / Output
@@ -318,6 +537,34 @@ score += 10;
 console.log("Score is now " + score);
 </code></pre>
 </div>
+
+{% capture challenge_cs111_demo_11 %}
+Input / Output
+{% endcapture %}
+
+{% capture code_cs111_demo_11 %}
+document.addEventListener("keydown", function(event) {
+
+    // INPUT (player presses a key)
+    if (event.key === "w") {
+        console.log("Player moves up");
+    }
+
+});
+
+// OUTPUT (game shows result)
+let score = 0;
+score += 10;
+
+console.log("Score is now " + score);
+{% endcapture %}
+
+{% include runners/code.html
+   runner_id="cs111-demo-11"
+   language="javascript"
+   challenge=challenge_cs111_demo_11
+   code=code_cs111_demo_11
+%}
 
 ---
 
