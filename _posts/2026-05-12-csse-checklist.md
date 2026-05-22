@@ -323,7 +323,6 @@ data.forEach((rowData, rowIndex) => {
 container.appendChild(table);
 </script>
 
-
 ### What Are Some Problems We Ran Into?
 Throughout the whole trimester our group ( me and joshika ) have run into a lot of errors for various different reasons. For exmaple at first when we started working with the gameengine our game would not load on the screen, it took a lot of time and effort to debug. Here are some things we had issues with that we now know more about becuase of a hard experience with them.
 
