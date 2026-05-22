@@ -176,33 +176,17 @@ const data = [
 
   ["Integration Testing",
    "We tested different parts of the game together to make sure everything worked correctly.",
-   "https://ishachaturvedi27.github.io/portfolio1/testing-verification"],
+   "https://ishachaturvedi27.github.io/portfolio1/testing-error-handling"],
 
   ["API Error Handling",
    "We used API error handling to prevent the game from crashing if data failed to load.",
-   "https://ishachaturvedi27.github.io/portfolio1/testing-verification"]
+   "https://ishachaturvedi27.github.io/portfolio1/testing-error-handling"]
 ];
 
-const rainbowColors = [
-  "#ff4d4d",
-  "#ff944d",
-  "#ffd24d",
-  "#66ff66",
-  "#4dd2ff",
-  "#6666ff",
-  "#cc66ff"
-];
-
-const buttonColors = [
-  "#ff4da6",
-  "#4dd2ff",
-  "#66ff66",
-  "#ffd24d",
-  "#cc66ff"
-];
+const rainbowColors = ["#ff4d4d","#ff944d","#ffd24d","#66ff66","#4dd2ff","#6666ff","#cc66ff"];
+const buttonColors = ["#ff4da6","#4dd2ff","#66ff66","#ffd24d","#cc66ff"];
 
 const container = document.getElementById("checklist-table");
-
 const table = document.createElement("table");
 
 table.style.width = "100%";
@@ -221,8 +205,7 @@ const headerRow = document.createElement("tr");
   th.textContent = text;
   th.style.padding = "14px";
   th.style.border = `2px solid ${rainbowColors[index + 1]}`;
-  th.style.background =
-    "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
+  th.style.background = "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet)";
   th.style.color = "white";
   th.style.fontWeight = "bold";
   th.style.fontSize = "16px";
@@ -234,7 +217,6 @@ table.appendChild(headerRow);
 // ROWS
 data.forEach((rowData, rowIndex) => {
   const row = document.createElement("tr");
-
   const borderColor = rainbowColors[rowIndex % rainbowColors.length];
 
   rowData.forEach((cellData, index) => {
@@ -250,14 +232,11 @@ data.forEach((rowData, rowIndex) => {
       const link = document.createElement("a");
       link.href = cellData;
       link.target = "_blank";
-      link.style.textDecoration = "none";
 
       const button = document.createElement("div");
       button.textContent = "Open!";
 
-      button.style.backgroundColor =
-        buttonColors[rowIndex % buttonColors.length];
-
+      button.style.backgroundColor = buttonColors[rowIndex % buttonColors.length];
       button.style.color = "white";
       button.style.padding = "10px 20px";
       button.style.borderRadius = "5px";
@@ -280,20 +259,6 @@ data.forEach((rowData, rowIndex) => {
     } else {
       cell.textContent = cellData;
     }
-
-    cell.addEventListener("mouseover", () => {
-      if (!cell.querySelector("a")) {
-        cell.style.backgroundColor = borderColor;
-        cell.style.color = "#000";
-      }
-    });
-
-    cell.addEventListener("mouseout", () => {
-      if (!cell.querySelector("a")) {
-        cell.style.backgroundColor = "#161b22";
-        cell.style.color = "#fff";
-      }
-    });
 
     row.appendChild(cell);
   });
@@ -322,17 +287,4 @@ data.forEach((rowData, rowIndex) => {
 
 container.appendChild(table);
 </script>
-
-### What Are Some Problems We Ran Into?
-Throughout the whole trimester our group ( me and joshika ) have run into a lot of errors for various different reasons. For exmaple at first when we started working with the gameengine our game would not load on the screen, it took a lot of time and effort to debug. Here are some things we had issues with that we now know more about becuase of a hard experience with them.
-
-- image pathways 
-- naming repositories 
-- file orginization 
-- permalink naming 
-- merging conflicts 
-- defining properties of a npc or player 
-- pull requesting properly
-- syntax errors
-- 404 errors 
 
