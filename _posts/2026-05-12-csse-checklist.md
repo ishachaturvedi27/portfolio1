@@ -148,7 +148,7 @@ const data = [
 
   ["Hit Box Visualization",
    "Ocean Adventure Hitbox Demo",
-   "https://pages.opencodingsociety.com/ocean-adventure"],
+   "https://ishachaturvedi27.github.io/portfolio1/debugging-documentation"],
 
   ["Source-Level Debugging",
    "We debugged code directly in the source to fix gameplay issues.",
@@ -199,7 +199,6 @@ table.style.overflow = "hidden";
 
 // HEADER
 const headerRow = document.createElement("tr");
-
 ["Concept", "Implementation", "Explanation"].forEach((text, index) => {
   const th = document.createElement("th");
   th.textContent = text;
@@ -211,7 +210,6 @@ const headerRow = document.createElement("tr");
   th.style.fontSize = "16px";
   headerRow.appendChild(th);
 });
-
 table.appendChild(headerRow);
 
 // ROWS
@@ -262,25 +260,6 @@ data.forEach((rowData, rowIndex) => {
 
     row.appendChild(cell);
   });
-
-  if (
-    rowData[1] === "" &&
-    rowData[2] === "" &&
-    (
-      rowData[0].includes("🎮") ||
-      rowData[0].includes("⚙️") ||
-      rowData[0].includes("📦") ||
-      rowData[0].includes("➕") ||
-      rowData[0].includes("⌨️") ||
-      rowData[0].includes("📝") ||
-      rowData[0].includes("🐞") ||
-      rowData[0].includes("✅")
-    )
-  ) {
-    row.style.fontWeight = "bold";
-    row.style.fontSize = "17px";
-    row.style.backgroundColor = "#111827";
-  }
 
   table.appendChild(row);
 });
