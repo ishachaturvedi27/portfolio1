@@ -267,3 +267,15 @@ data.forEach((rowData, rowIndex) => {
 container.appendChild(table);
 </script>
 
+### What Were a Few Things That We Struggled With?
+Throughout the third trimester of this class my team ( me and joshika ) ran into quite a lot of issues but as we kept running into more we slowly started learning more and more. Below are a few examples of what we had problems with.
+
+- game engine showing on the screen
+- file orginization 
+- config.yml conflicts 
+- divergent branches 
+- merging conflicts 
+- pull requests 
+- hidden syntax errors 
+- repository orginzation 
+- syncing forks 
