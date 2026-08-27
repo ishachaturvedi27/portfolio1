@@ -58,7 +58,7 @@ Here is a little bit about where me and my family have previously lived
 
 ### Journey through Life
 
-Here is a little bit about me 
+Here is a little bit about me: 
 
 - 🏫 Elementary school (Monterey Ridge Elementary School) 2022 promotion 
 - 🏫 Middle school (Oak Valley Middle School) 2025 promotion
