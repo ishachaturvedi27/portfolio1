@@ -8,7 +8,7 @@ comments: true
 ## As a conversation Starter
 
 
- My favorite places to go
+ My favorite places to be 
 <style>
   .grid {
     display: grid;
