@@ -14,15 +14,14 @@ body:has(.lesson-player) {
   margin: 0;
 }
 
-/* Make lesson-player flow with the page (not a full fixed overlay) to avoid overlapping embedded HTML */
 .lesson-player {
   display: flex;
-  position: relative; /* don't fix to viewport */
-  height: auto;
-  width: 100%;
-  top: auto;
-  left: auto;
-  z-index: 1;
+  height: calc(100vh - 80px);
+  width: 100vw;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 1000;
 }
 
 /* LEFT SIDEBAR */
