@@ -6,24 +6,23 @@ body:has(.lesson-player) {
   padding: 0;
 }
 
-/* Override any parent container constraints only for lesson player */
-.lesson-player .container,
-.lesson-player .main-content,
-.lesson-player .wrapper {
-  max-width: none !important;
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Narrower, non-invasive container adjustments for lesson-player */
+.lesson-player > .wrapper,
+.lesson-player .main-content {
+  /* preserve global container sizing; only remove extra padding inside lesson player */
+  padding: 0;
+  margin: 0;
 }
 
+/* Make lesson-player flow with the page (not a full fixed overlay) to avoid overlapping embedded HTML */
 .lesson-player {
   display: flex;
-  height: calc(100vh - 80px);
-  width: 100vw;
-  position: fixed;
-  top: 80px;
-  left: 0;
-  z-index: 1000;
+  position: relative; /* don't fix to viewport */
+  height: auto;
+  width: 100%;
+  top: auto;
+  left: auto;
+  z-index: 1;
 }
 
 /* LEFT SIDEBAR */
@@ -254,6 +253,23 @@ body:has(.lesson-player) {
 .lesson-body {
   color: $text-muted;
   line-height: 1.7;
+}
+
+/* Hide embedded full-page chrome when a full HTML snippet is included inside lesson content */
+.lesson-body .site-header,
+.lesson-body header.site-header,
+.lesson-body .site-title,
+.lesson-body .site-nav,
+.lesson-body .trigger,
+.lesson-body .wrapper > .site-header,
+.lesson-body nav,
+.lesson-body footer,
+.lesson-body header,
+.lesson-body main,
+.lesson-body link,
+.lesson-body meta,
+.lesson-body script {
+  display: none !important;
 }
 
 .lesson-body h2 {
