@@ -83,6 +83,33 @@ Hi! My name is Isha Chaturvedi
     <a href="{{site.baseurl}}/ground/zero" class="btn" style="background-color: var(--teal);">
        Ground Zero
     </a>
+      <a href="{{site.baseurl}}/python/v-hw" class="btn">
+        Variables
+    </a>
+    <a href="{{site.baseurl}}/python/ns-hw" class="btn" style="background-color: var(--green);">
+        Nested Conditionals
+    </a>
+    <a href="{{site.baseurl}}/python/lib-hw" class="btn" style="background-color: var(--teal);">
+        Libraries
+    </a>
+    <a href="{{site.baseurl}}/sass/buttons-hw/" class="btn" style="background-color: var(--orange);">
+        Buttons
+    </a>
+    <a href="{{site.baseurl}}/python/b-hw" class="btn" style="background-color: var(--teal);">
+        Booleans
+    </a>
+    <a href="{{site.baseurl}}/python/random-hw" class="btn" style="background-color: var(--green);">
+        Random
+    </a>
+    <a href="{{site.baseurl}}/sass/typography" class="btn" style="background-color: var(--orange);">
+        Typography
+    </a>
+    <a href="{{site.baseurl}}/sass/grids" class="btn" style="background-color: var(--teal);">
+        Grids
+    </a>
+    <a href="{{site.baseurl}}/sass/containers" class="btn" style="background-color: var(--green);">
+        Containers
+    </a>
 </div>
 
 <br>
