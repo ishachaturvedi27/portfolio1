@@ -110,6 +110,9 @@ Hi! My name is Isha Chaturvedi
     <a href="{{site.baseurl}}/sass/containers" class="btn" style="background-color: var(--green);">
         Containers
     </a>
+    <a href="{{site.baseurl}}/python/strings-hw" class="btn" style="background-color: var(--orange);">
+        Containers
+    </a>
 </div>
 
 <br>
